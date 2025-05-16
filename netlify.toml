@@ -41,13 +41,19 @@
 
 # Environment variable configuration
 [context.production.environment]
-  NODE_ENV = "development"
+  NODE_ENV = "production"
+  # Database connection string (this is a placeholder - set in Netlify UI)
+  DATABASE_URL = "postgresql://neondb_owner:npg_safrIN5gkcK6@ep-steep-hall-a4mnzene-pooler.us-east-1.aws.neon.tech/neondb?sslmode=require"
 
 [context.deploy-preview.environment]
-  NODE_ENV = "development"
+  NODE_ENV = "production"
+  # Database connection string (this is a placeholder - set in Netlify UI)
+  DATABASE_URL = "postgresql://neondb_owner:npg_safrIN5gkcK6@ep-steep-hall-a4mnzene-pooler.us-east-1.aws.neon.tech/neondb?sslmode=require"
 
 [context.branch-deploy.environment]
-  NODE_ENV = "development"
+  NODE_ENV = "production"
+  # Database connection string (this is a placeholder - set in Netlify UI)
+  DATABASE_URL = "postgresql://neondb_owner:npg_safrIN5gkcK6@ep-steep-hall-a4mnzene-pooler.us-east-1.aws.neon.tech/neondb?sslmode=require"
 
 # Netlify functions configuration (if needed in the future)
 [functions]
