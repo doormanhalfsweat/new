@@ -1,0 +1,49 @@
+# Netlify configuration file
+
+[build]
+  # Directory to change to before starting a build
+  base = "/"
+  
+  # Directory that contains the deploy-ready HTML files and assets
+  publish = "dist"
+  
+  # Default build command
+  command = "npm run build"
+
+# Redirects and rewrites
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Headers to return with requests for the specified paths
+[[headers]]
+  # Define which paths this specific [[headers]] block will cover
+  for = "/*"
+    [headers.values]
+    # Multi-key header rules are expressed with multi-line strings
+    cache-control = '''
+    max-age=0,
+    no-cache,
+    no-store,
+    must-revalidate'''
+
+# For static assets that can be cached longer
+[[headers]]
+  for = "/assets/*"
+    [headers.values]
+    cache-control = "public, max-age=31536000, immutable"
+
+# Environment variable configuration
+[context.production.environment]
+  NODE_ENV = "production"
+
+[context.deploy-preview.environment]
+  NODE_ENV = "production"
+
+[context.branch-deploy.environment]
+  NODE_ENV = "production"
+
+# Netlify functions configuration (if needed in the future)
+[functions]
+  directory = "netlify/functions"

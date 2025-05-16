@@ -1,0 +1,4 @@
+# Netlify _redirects file
+# This file ensures that all routes are handled by the single page application
+
+/* /index.html 200

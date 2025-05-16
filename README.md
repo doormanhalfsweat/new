@@ -62,7 +62,32 @@ This project is built with:
 
 ## How can I deploy this project?
 
+### Deploy with Lovable
+
 Simply open [Lovable](https://lovable.dev/projects/e62b3ea0-7c26-4985-8aab-c9c91484fb6a) and click on Share -> Publish.
+
+### Deploy with Netlify
+
+This project is optimized for Netlify deployment. You can deploy it in several ways:
+
+1. **Via Netlify UI**:
+   - Push your code to a Git repository
+   - Connect your repository to Netlify
+   - Netlify will automatically detect the build settings from `netlify.toml`
+
+2. **Via Netlify CLI**:
+   ```sh
+   # Install Netlify CLI globally
+   npm install -g netlify-cli
+   
+   # Login to your Netlify account
+   netlify login
+   
+   # Deploy your site
+   npm run netlify:deploy
+   ```
+
+For detailed deployment instructions, see the [NETLIFY_DEPLOYMENT.md](./NETLIFY_DEPLOYMENT.md) file.
 
 ## Can I connect a custom domain to my Lovable project?
 
