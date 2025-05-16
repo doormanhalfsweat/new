@@ -8,7 +8,7 @@
   publish = "dist"
   
   # Default build command
-  command = "npm install && npm install vite@6.3.5 --save-dev && npm run build"
+  command = "npm install --legacy-peer-deps && npm run build"
   
   # Environment variables
   [build.environment]
@@ -41,13 +41,13 @@
 
 # Environment variable configuration
 [context.production.environment]
-  NODE_ENV = "production"
+  NODE_ENV = "development"
 
 [context.deploy-preview.environment]
-  NODE_ENV = "production"
+  NODE_ENV = "development"
 
 [context.branch-deploy.environment]
-  NODE_ENV = "production"
+  NODE_ENV = "development"
 
 # Netlify functions configuration (if needed in the future)
 [functions]
