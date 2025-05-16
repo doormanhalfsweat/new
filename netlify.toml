@@ -8,7 +8,7 @@
   publish = "dist"
   
   # Default build command
-  command = "npm install --legacy-peer-deps && npm run build"
+  command = "npm install --legacy-peer-deps && npx vite build"
   
   # Environment variables
   [build.environment]
