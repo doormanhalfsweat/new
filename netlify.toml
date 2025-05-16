@@ -8,7 +8,12 @@
   publish = "dist"
   
   # Default build command
-  command = "npm run build"
+  command = "npm install && npm run build"
+  
+  # Environment variables
+  [build.environment]
+    # Ensure dev dependencies are installed
+    NODE_ENV = "development"
 
 # Redirects and rewrites
 [[redirects]]
